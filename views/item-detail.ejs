@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/styles.css">
+    <title>Coven's Stash | <%= title %></title>
+</head>
+<body>
+    <%- include('partials/nav') %>
+
+    <main class="itemDetailsDiv">
+        <div class="detailDivLeft"></div>
+
+        <div class="detailDivRight">
+            <h1><%= item.name %></h1>
+
+            <div class="itemDtls">
+                <p><strong>Description:</strong> <%= item.description %></p>
+                <p><strong>Category:</strong> <%= item.category %></p>
+                <p><strong>Price:</strong> <%= item.price %> Diamonds</p>
+                <p><strong>Quantity:</strong> <%= item.quantity %> piece/s</p>
+            </div>
+
+            <div class="itemActions">
+                <a href="/items/<%= item.id %>/edit">
+                    <button class="editBtn">Edit</button>
+                </a>
+                <form action="/items/<%= item.id %>/delete" method="POST" style="display:inline;">
+                    <button type="submit" class="deleteBtn">Delete</button>
+                </form>
+            </div>
+
+
+            <a href="/items" class="backTo">
+                <img src="/imgs/arrow-left.svg" alt="Icon for left arrow" class="arrowLeft">
+                Back to: Items List
+            </a>
+        </div>
+
+    </main>
+</body>
+</html>

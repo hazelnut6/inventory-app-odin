@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/styles.css">
+    <title>Coven's Stash | <%= title %></title>
+</head>
+<body>
+    <%- include('partials/nav') %>
+
+    <main class="addItemDiv">
+        <h1>Add a magical item</h1>
+
+        <form action="/items/add" method="post" class="addForm">
+            <div>
+                <label for="name">Name</label> 
+                <input type="text" name="name" id="name" placeholder="Darkhold" required>
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <textarea name="description" id="description" placeholder="Most potent record of dark magic" rows="4" required></textarea>
+            </div>
+            <div>
+                <label for="category_id">Category</label>
+                <select name="category_id" id="category_id" required>
+                    <option value="">Select a category</option>
+                    <% categories.forEach(category => { %>
+                        <option value="<%= category.id %>"><%= category.name %></option>
+                    <% }); %>
+                </select>
+            </div>
+            <div>
+                <label for="price">Price</label>
+                <input type="number" name="price" id="price" step="0.01"  placeholder="1000" required>
+            </div>
+            <div>
+                <label for="quantity">Quantity</label>
+                <input type="number" name="quantity" id="quantity" value="1" required>
+            </div>
+
+            <button type="submit" class="addBtn">Add item</button>
+        </form>
+    </main>
+</body>
+</html>

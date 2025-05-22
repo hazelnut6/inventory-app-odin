@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/styles.css">
+    <title>Coven's Stash | <%= title %></title>
+</head>
+<body>
+    <%- include('partials/nav') %>
+    
+    <main class="itemsDiv">
+        <header>
+            <div class="searchDiv">
+                <form action="/items/search" method="get" class="seachForm">
+                    <input type="text" name="q" class="searchBar" placeholder="Necronomicon">
+                    <button type="submit" class="searchBtn">Search</button>
+                </form>
+            </div>
+            <div class="categoryDiv">
+                <a href="/items" class="catBtn">All</a>
+                <% categories.forEach(category => { %>
+                    <a href="/items/category/<%= category.name %>" class="catBtn"><%= category.name %></a>
+                <% }); %>
+            </div>
+        </header>
+
+        <% if(request.query.deleted === 'true') { %>
+            <p class="successMsg">Item deleted successfully!</p>
+        <% } %>
+
+        <div class="tableWrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead> 
+                <tbody>
+                    <% items.forEach(item => { %>
+                    
+                        <tr>
+                            <td>
+                                <a href="/items/<%= item.id %>" class="itemLink">
+                                    <p><%= item.name %></p>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/items/<%= item.id %>" class="itemLink">
+                                    <p><%= item.description %></p>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/items/<%= item.id %>" class="itemLink">
+                                    <p><%= item.category %></p>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/items/<%= item.id %>" class="itemLink">
+                                    <p><%= item.price %></p>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/items/<%= item.id %>" class="itemLink">
+                                    <p><%= item.quantity %></p>
+                                </a>
+                            </td>
+                        </tr>
+                    <% }); %>    
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <%- include('partials/footer') %>
+</body>
+</html>

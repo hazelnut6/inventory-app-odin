@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/styles.css">
+    <title>Coven's Stash | <%= title %></title>
+</head>
+<body>
+    <%- include('partials/nav') %>
+    
+    <main>
+        <section class="sectOne">
+            Coven's Stash <br>
+            <p>Inventory</p>
+
+            <div class="custom-shape-divider-bottom-1747369563">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M649.97 0L550.03 0 599.91 54.12 649.97 0z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+        <section class="sectThree">
+            <h2>Browse our mystical collection by category</h2>
+
+            <div class="homeCatDiv">
+                <a href="/items/category/Artifacts">
+                    <button class="homeCatBtn artifactsBtn"></button>
+                </a>
+                <a href="/items/category/Crystals">
+                    <button class="homeCatBtn crystalsBtn"></button>
+                </a>
+                <a href="/items/category/Divination tools">
+                    <button class="homeCatBtn divinationBtn"></button>
+                </a>
+                <a href="/items/category/Potions">
+                    <button class="homeCatBtn potionsBtn"></button>
+                </a>
+                <a href="/items/category/Spellbooks">
+                    <button class="homeCatBtn spellsBtn"></button>
+                </a>
+                <a href="/items/category/Wands">
+                    <button class="homeCatBtn wandsBtn"></button>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <%- include('partials/footer') %>
+</body>
+</html>
