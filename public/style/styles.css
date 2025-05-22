@@ -1,0 +1,664 @@
+/* montserrat-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/montserrat-v29-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/montserrat-v29-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* amarante-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Amarante';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/amarante-v28-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+    --sm-font: 1rem;
+    --md-font: 2rem;
+    --lg-font: 3rem;
+    --aubergine: #372528;
+    --btn-light: #6c413e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+p {
+    font-size: var(--sm-font);
+}
+
+nav {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 0 50px;
+    background-color: var(--aubergine);
+    color: white;
+    z-index: 1;
+    /* border: 1px solid black; */
+}
+
+.navLeft a {
+    color: white;
+    text-decoration: none;
+}
+
+.sitename {
+    font-family: 'Amarante';
+}
+
+.navRight ul {
+    height: inherit;
+    width: 30vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+.navRight ul a {
+    color: white;
+    text-decoration: none;
+}
+
+.navRight ul a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 8px;
+}
+
+main, .sectTwo, .sectThree {
+    width: 100%;
+    padding-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sectTwo, .sectThree {
+    height: 100vh;
+}
+
+/********** HOME **********/
+.sectOne {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Amarante';
+    font-size: 4rem;
+    color: #fff3f7;
+    background: #51373B;
+    background: linear-gradient(0deg, rgba(81, 55, 59, 1) 0%, rgba(55, 37, 40, 1) 100%);
+    position: relative;
+    /* border: 1px black solid; */
+}
+
+.sectOne p {
+    /* text-transform: uppercase; */
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+.custom-shape-divider-bottom-1747369563 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1747369563 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 300px;
+}
+
+.custom-shape-divider-bottom-1747369563 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.sectTwo, .sectThree {
+    height: 100vh;
+    width: calc(100vw - 15px);
+}
+
+.sectThree {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.homeCatDiv {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.homeCatBtn {
+    padding: 150px 100px;
+    border-style: none;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.homeCatBtn:hover {
+    cursor: pointer;
+}
+
+.artifactsBtn {
+    background-image: url('/imgs/artifacts-bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.artifactsBtn:hover {
+    background:  url('/imgs/artifacts-bg.png') rgba(55, 37, 40, 0.3);
+    background-blend-mode: overlay;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.crystalsBtn {
+    background-image: url('/imgs/crystals-bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.crystalsBtn:hover {
+    background:  url('/imgs/crystals-bg.png') rgba(55, 37, 40, 0.3);
+    background-blend-mode: overlay;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.divinationBtn {
+    background-image: url('/imgs/divination-bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.divinationBtn:hover {
+    background:  url('/imgs/divination-bg.png') rgba(55, 37, 40, 0.3);
+    background-blend-mode: overlay;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.potionsBtn {
+    background-image: url('/imgs/potions-bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.potionsBtn:hover {
+    background:  url('/imgs/potions-bg.png') rgba(55, 37, 40, 0.3);
+    background-blend-mode: overlay;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.spellsBtn {
+    background-image: url('/imgs/spell-bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.spellsBtn:hover {
+    background:  url('/imgs/spell-bg.png') rgba(55, 37, 40, 0.3);
+    background-blend-mode: overlay;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.wandsBtn {
+    background-image: url('/imgs/wands-bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.wandsBtn:hover {
+    background:  url('/imgs/wands-bg.png') rgba(55, 37, 40, 0.3);
+    background-blend-mode: overlay;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/********** ITEMS **********/
+.itemsDiv {
+    width: 100%;
+}
+
+header {
+    height: 20vh;
+    width: 100%;
+    text-align: center;
+    padding: 5vh 0;
+}
+
+.successMsg {
+    text-align: center;
+    color: black;
+    padding: 10px 25px;
+    border: 1px solid forestgreen;
+    background-color: rgb(181, 230, 181);
+    border-radius: 7px;
+    margin: 20px 0;
+}
+
+.searchDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.seachForm {
+    width: 100%;
+}
+
+.searchBar, .searchBtn {
+    padding: 8px 15px;
+    border-radius: 50px;
+    border-style: none;
+}
+
+.searchBar {
+    border: 1px solid var(--aubergine);
+    width: 25%;
+    font-size: var(--sm-font);
+}
+
+.searchBtn {
+    color: white;
+    background-color: var(--aubergine);
+    width: 8%;
+    font-size: var(--sm-font);
+}
+
+.searchBtn:hover {
+    background-color: #bda5a9;
+    outline: 2px solid var(--aubergine);
+    color: black;
+}
+
+.categoryDiv {
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.catBtn {
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 50px;
+    color: white;
+    background-color: var(--aubergine);
+}
+
+.catBtn:hover {
+    background-color: #bda5a9;
+    outline: 2px solid var(--aubergine);
+    color: black;
+}
+
+.tableWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 20px; 
+}
+
+table {
+    border-collapse: collapse;
+    width: 85%;
+}
+
+thead tr {
+    background-color:  #897175;
+}
+
+td, th {
+    border: 1px solid #372528;
+    padding: 5px;
+}
+
+
+tbody tr:hover {
+    background-color: #bda5a9;
+}
+
+.itemLink{
+    color: black;
+    text-decoration: none;
+}
+
+.itemLink p {
+    height: 100%;
+    width: 100%;
+    /* background-color: rebeccapurple; */
+}
+
+/********** ADD ITEM **********/
+.addItemDiv, .editItemDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.addForm {
+    border: 1px solid var(--aubergine);
+    border-radius: 10px;
+    width: 30%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.addForm div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.addForm div label {
+    width: 100%;
+    text-align: left;
+    padding-left: 15px;
+}
+
+#name, 
+#description, 
+#category_id, 
+#price, 
+#quantity {
+    width: 90%;
+    padding: 5px;
+    border-radius: 5px;
+    border-style: none;
+    font-size: var(--sm-font);
+    border: 1px solid black;
+}
+
+#description {
+    resize: none;
+}
+
+.addBtn {
+    margin-top: 10px;
+    padding: 8px 20px;
+    color: white;
+    font-size: var(--sm-font);
+    border-style: none;
+    border-radius: 50px;
+    background-color: var(--aubergine);
+}
+
+.addBtn:hover {
+    color: black;
+    background-color: #bda5a9;
+    outline: 2px solid var(--aubergine);
+    cursor: pointer;
+    transition: .5 ease-in-out;
+}
+
+/********** ITEM DETAIL **********/
+.itemDetailsDiv {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.detailDivRight {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.detailDivRight a {
+    text-decoration: none;
+    color: black;
+}
+
+.detailDivLeft {
+    height: 100%;
+    width: 30%;
+    background-image: url('/imgs/candles.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.itemDtls {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.itemActions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.editBtn, .deleteBtn {
+    border-style: none;
+    color: white;
+    font-size: var(--sm-font);
+    background-color: var(--aubergine);
+    padding: 8px 20px;
+    border-radius: 50px;
+}
+
+.editBtn:hover {
+    outline: 2px solid var(--aubergine);
+    background-color: #bda5a9;
+    color: black;
+    cursor: pointer;
+    transition: .5 ease-in-out;
+}
+
+.deleteBtn:hover {
+    outline: 2px solid var(--aubergine);
+    background-color: #bda5a9;
+    color: black;
+    cursor: pointer;
+    transition: .5 ease-in-out;
+}
+
+
+.backTo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    gap: 5px;
+}
+
+.backTo:hover {
+    border-bottom: 1px solid var(--aubergine);
+}
+
+.arrowLeft {
+    height: 25px;
+}
+
+/********** EDIT ITEM **********/
+.editForm {
+    border: 1px solid var(--aubergine);
+    border-radius: 10px;
+    width: 30%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.editForm div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.editForm div label {
+    width: 100%;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.saveBtn {
+    margin-top: 10px;
+    padding: 8px 20px;
+    color: white;
+    font-size: var(--sm-font);
+    border-style: none;
+    border-radius: 50px;
+    background-color: var(--aubergine);
+}
+
+.saveBtn:hover {
+    color: black;
+    background-color: #bda5a9;
+    outline: 2px solid var(--aubergine);
+    cursor: pointer;
+    transition: .5 ease-in-out;
+}
+
+.editBackTo {
+    margin-top: 10px;
+}
+
+footer {
+    padding: 5px;
+    text-align: center;
+}
+
+/********** MEDIA QUERIES **********/
+
+/* sm */
+@media (width <= 640px) {
+    nav {
+      padding: 0 5px;  
+    }
+
+    .navRight ul {
+        width: 55vw;
+    }
+
+    header {
+        height: 30vh;
+        padding: 15px 0;
+    }
+
+    .homeCatDiv {
+        flex-wrap: wrap;
+    }
+
+    .searchBar {
+        width: 50%;
+    }
+
+    .searchBtn {
+        width: 25%;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 70%;
+    }
+
+    .addForm, .editForm {
+        width: 85%;
+    }
+
+    .categoryDiv {
+        flex-wrap: wrap;
+    }
+
+    .detailDivLeft {
+        display: none;
+    }
+}
+
+/* md */
+@media (645px<= width < 1024px) {
+    header {
+        height: 15vh;
+        padding: 15px 0;
+    }
+
+    .homeCatDiv {
+        flex-wrap: wrap;
+    }
+
+    .searchBar {
+        width: 30%;
+    }
+
+    .searchBtn {
+        width: 13%;
+    }
+
+    .addForm, .editForm {
+        width: 55%;
+    }
+
+    .detailDivLeft {
+        display: none;
+    }
+}
